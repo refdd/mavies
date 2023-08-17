@@ -1,0 +1,17 @@
+{
+    "common":{
+        "My-List": "قائمتي",
+        "New_Popular": "جديد وشعبي",
+        "Movies": "أفلام",
+        "TVShows": "عرض تلفزيوني",
+        "Home": "الصفحة الرئيسية",
+        "TrendingNow": "الشائع الآن",
+        "Top_Rated": "أعلى التقييمات",
+        "ActionThrillers" : "أفلام الحركة والإثارة",
+        "Comedies" : "أفلام كوميدية" ,
+        "ScaryMovies" : "أفلام رعب",
+        "RomanceMovies"   : "الأفلام الرومانسية",
+        "Documentaries" : "الافلام الوثائقية" 
+      }
+   
+}

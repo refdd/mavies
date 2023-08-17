@@ -1,0 +1,17 @@
+{
+    "common":{
+        "My-List": "My List",
+        "New_Popular": "New & Popular",
+        "Movies": "Movies",
+        "TVShows": "TV Shows",
+        "Home": "Home",
+        "TrendingNow": "Trending Now",
+        "Top_Rated": "Top Rated",
+        "ActionThrillers" : "Action Thrillers",
+        "Comedies" : "Comedies" ,
+        "ScaryMovies" : "Scary Movies",
+        "RomanceMovies"   : "Romance Movies",
+        "Documentaries" : "Documentaries" 
+      }
+   
+}

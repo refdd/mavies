@@ -7,9 +7,13 @@ import { IconButton, Tooltip } from "@mui/material";
 import { AiOutlineLogout } from "react-icons/ai";
 import useAuth from "../hooks/useAuth";
 import { Link } from "react-router-dom";
+import Selectlanguages from "./Selectlanguages";
+import { useTranslation } from "react-i18next";
 function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const { logout, user } = useAuth();
+  const { t, i18n } = useTranslation();
+
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 0) {
@@ -28,7 +32,7 @@ function Header() {
 
   return (
     <header className={`${isScrolled && "bg-[#141414]"}`}>
-      <div className="flex items-center space-x-2 md:space-x-10">
+      <div className="flex items-center gap-2 md:gap-10">
         <Link to={"/"}>
           <img
             src={logo}
@@ -40,17 +44,18 @@ function Header() {
 
         <BasicMenu />
 
-        <ul className="hidden space-x-4 md:flex">
-          <li className="headerLink">Home</li>
-          <li className="headerLink">TV Shows</li>
-          <li className="headerLink">Movies</li>
-          <li className="headerLink">New & Popular</li>
-          <li className="headerLink">My List</li>
+        <ul className="hidden gap-4 md:flex">
+          <li className="headerLink">{t("common:common.Home")}</li>
+          <li className="headerLink">{t("common:common.TVShows")}</li>
+          <li className="headerLink">{t("common:common.Movies")}</li>
+          <li className="headerLink">{t("common:common.New_Popular")}</li>
+          <li className="headerLink">{t("common:common.My-List")}</li>
         </ul>
       </div>
 
-      <div className="flex items-center space-x-4 text-sm font-light">
+      <div className="flex items-center gap-4 text-sm font-light">
         <SearchIcon className="hidden h-6 w-6 sm:inline" />
+        <Selectlanguages />
         <p className="hidden lg:inline">Kids</p>
         <BellIcon className="h-6 w-6" />
         <div className="">
