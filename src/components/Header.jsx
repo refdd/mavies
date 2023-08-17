@@ -9,10 +9,12 @@ import useAuth from "../hooks/useAuth";
 import { Link } from "react-router-dom";
 import Selectlanguages from "./Selectlanguages";
 import { useTranslation } from "react-i18next";
+import { useTheme } from "../hooks/ThemeContext";
 function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const { logout, user } = useAuth();
   const { t, i18n } = useTranslation();
+  const { darkTheme, setDarkTheme, toggleTheme } = useTheme();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -55,6 +57,17 @@ function Header() {
 
       <div className="flex items-center gap-4 text-sm font-light">
         <SearchIcon className="hidden h-6 w-6 sm:inline" />
+        <button
+          type="button"
+          onClick={() => setDarkTheme(!darkTheme)}
+          className={`text-xl    border rounded-full px-2 py-1 hover:shadow-lg ${
+            darkTheme
+              ? "bg-white dark:text-gray-900 "
+              : " dark:bg-gray-900 dark:text-gray-900"
+          }`}
+        >
+          {darkTheme ? "💡 Light" : "🌙 Dark"}
+        </button>
         <Selectlanguages />
         <p className="hidden lg:inline">Kids</p>
         <BellIcon className="h-6 w-6" />
