@@ -6,6 +6,7 @@ import logo from "../../src/assets/image/logo.png";
 import { IconButton, Tooltip } from "@mui/material";
 import { AiOutlineLogout } from "react-icons/ai";
 import useAuth from "../hooks/useAuth";
+import { Link } from "react-router-dom";
 function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const { logout, user } = useAuth();
@@ -28,12 +29,14 @@ function Header() {
   return (
     <header className={`${isScrolled && "bg-[#141414]"}`}>
       <div className="flex items-center space-x-2 md:space-x-10">
-        <img
-          src={logo}
-          width={100}
-          height={100}
-          className="cursor-pointer object-contain"
-        />
+        <Link to={"/"}>
+          <img
+            src={logo}
+            width={100}
+            height={100}
+            className="cursor-pointer object-contain"
+          />
+        </Link>
 
         <BasicMenu />
 

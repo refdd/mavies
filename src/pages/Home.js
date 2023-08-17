@@ -40,9 +40,10 @@ function Home() {
       .fetchMovies(requests.fetchDocumentaries)
       .then((response) => setdocumentaries(response.results));
   }, []);
-  console.log(netflixOriginals);
   return (
-    <div className={`relative h-screen bg-gradient-to-b lg:h-[140vh]  `}>
+    <div
+      className={`relative h-screen bg-gradient-to-b from-[#ffffff17] to-black  lg:h-[140vh]  `}
+    >
       <Header />
       <main className="relative pl-4 pb-24 lg:space-y-24 lg:pl-4">
         <Banner netflixOriginals={netflixOriginals} />
