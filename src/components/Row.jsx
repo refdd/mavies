@@ -1,11 +1,10 @@
 import Thumbnail from "./Thumbnail";
 import React, { useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { Link } from "react-router-dom";
 import "swiper/css";
 import "swiper/css/pagination";
 import { Pagination } from "swiper/modules";
-import { Link } from "react-router-dom";
-
 function Row({ title, movies }) {
   return (
     <div className="h-40 space-y-0.5 md:space-y-2 overflow-hidden">
