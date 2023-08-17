@@ -45,7 +45,7 @@ function Home() {
   }, []);
   return (
     <div
-      className={`relative h-screen bg-gradient-to-b from-[#ffffff17] to-black  lg:h-[140vh]  `}
+      className={`relative h-screen bg-gradient-to-b from-[#ffffff17] to-black dark:from-black lg:h-[140vh]  `}
     >
       <Header />
       <main
