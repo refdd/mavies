@@ -3,9 +3,9 @@ import React from "react";
 function OverView({ movieData }) {
   return (
     <div className=" container mx-auto px-4 md:px-10">
-      <div className="flex space-x-16 rounded-b-md  py-8">
+      <div className="flex gap-16 rounded-b-md  py-8">
         <div className="space-y-10 text-lg">
-          <div className="flex items-center space-x-2 text-base">
+          <div className="flex items-center gap-2 text-base">
             <p className="font-semibold text-green-400">
               {movieData?.vote_average * 10}% Match
             </p>

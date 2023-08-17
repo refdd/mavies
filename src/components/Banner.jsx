@@ -28,7 +28,7 @@ function Banner({ netflixOriginals }) {
         {movie?.overview}
       </p>
 
-      <div className="flex space-x-3">
+      <div className="flex gap-3">
         <button className="bannerButton bg-white text-black">
           <svg
             xmlns="http://www.w3.org/2000/svg"
