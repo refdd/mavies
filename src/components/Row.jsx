@@ -4,6 +4,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import { Pagination } from "swiper/modules";
+import { Link } from "react-router-dom";
 
 function Row({ title, movies }) {
   return (
@@ -37,7 +38,9 @@ function Row({ title, movies }) {
       >
         {movies.map((movie) => (
           <SwiperSlide key={movie.id}>
-            <Thumbnail movie={movie} />
+            <Link to={`/MovieDetalis/${movie.id}`}>
+              <Thumbnail movie={movie} />
+            </Link>
           </SwiperSlide>
         ))}
       </Swiper>
